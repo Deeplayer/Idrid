@@ -27,6 +27,3 @@ def xception():
     model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
 
     return model
-
-m = xception()
-m.summary()
