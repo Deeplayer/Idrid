@@ -51,10 +51,8 @@ def scale(img, scale=400):
 PATH = 'F:/PythonProjects/Idrid/train/**.jpeg'
 PATH_OUT = 'F:/PythonProjects/Idrid/processed/'
 size_out = 512
-ph = glob.glob(PATH)
-random.shuffle(ph)
 
-for path in ph:
+for path in glob.glob(PATH):
     print(path)   # 10503_left, 11115_left
     img = cv2.imread(path)
     plt.figure(figsize=(13, 8))
