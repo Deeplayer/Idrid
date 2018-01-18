@@ -5,7 +5,6 @@ from keras.layers import BatchNormalization, Dropout, GlobalMaxPooling2D, Global
 from keras.applications.xception import Xception
 
 
-
 def xception():
 
     base_model = Xception(weights='imagenet', include_top=False, input_shape=(512,512,3))
