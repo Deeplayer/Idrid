@@ -53,7 +53,7 @@ PATH_OUT = 'F:/PythonProjects/Idrid/processed/'
 size_out = 512
 
 for path in glob.glob(PATH):
-    print(path)   
+    #print(path)   
     img = cv2.imread(path)
     plt.figure(figsize=(13, 8))
     plt.subplot(231)
@@ -83,8 +83,8 @@ for path in glob.glob(PATH):
     perimeter2 = cv2.arcLength(maxc2, True)
     circularity1 = perimeter1 ** 2 / (4 * math.pi * area1)
     circularity2 = perimeter2 ** 2 / (4 * math.pi * area2)
-    print(circularity1, circularity2)
-    print()
+    #print(circularity1, circularity2)
+    #print()
 
     m1 = np.ones((binary1.shape[0],binary1.shape[1],3))
     m2 = np.ones((binary2.shape[0],binary2.shape[1],3))
