@@ -53,7 +53,7 @@ PATH_OUT = 'F:/PythonProjects/Idrid/processed/'
 size_out = 512
 
 for path in glob.glob(PATH):
-    print(path)   # 10503_left, 11115_left
+    print(path)   
     img = cv2.imread(path)
     plt.figure(figsize=(13, 8))
     plt.subplot(231)
@@ -97,18 +97,17 @@ for path in glob.glob(PATH):
     plt.imshow(m2)
     plt.title(str(round(circularity2,3)))
     #plt.show()
-
-    if abs(circularity1-1) < abs(circularity2-1):
+    
+    ratio1 = area1 / (gray.shape[0]*gray.shape[1])
+    ratio2 = area2 / (gray.shape[0]*gray.shape[1])
+    if (abs(circularity1-1) < abs(circularity2-1)) and ratio1 < 0.9 or ratio2 < 0.3:
         binary = binary1
         loc = loc1
     else:
         binary = binary2
         loc = loc2
 
-    if path[30:-5] == '10503_left':
-        img = img[loc[0]:loc[1], loc[2]:loc[3]-250]
-    else:
-        img = img[loc[0]:loc[1], loc[2]:loc[3]]
+    img = img[loc[0]:loc[1], loc[2]:loc[3]]
 
     img = scale(img)
 
