@@ -3,7 +3,7 @@
 EyePACS (kaggle):
 
 --- Train: 35126          
------ Val: 10906 (8130 720 1579 237 240)         
+----- Val: 10906 (8130 - 720 - 1579 - 237 - 240)         
 ---- Test: 42670
 
 [train+test] class proportion:
