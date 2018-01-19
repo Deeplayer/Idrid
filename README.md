@@ -6,6 +6,14 @@ EyePACS (kaggle):
 ----- Val: 10906         
 ---- Test: 42670
 
-trainClass: 0 1 2 3 4
+[train+test] class proportion:
 
-number: 25810
+Negative: [0] -- 57213 -- 73.54%
+
+Mild NPDR: [1] -- 5485 -- 7.05%
+
+Moderate NPDR: [2] -- 11574 -- 14.88%
+
+Severe NPDR: [3] -- 1850 -- 2.38%
+
+PDR: [4] -- 1674 -- 2.15%
